@@ -5,13 +5,13 @@ const mostrarReloj = () => {
     let segundos = formatoHora(fecha.getSeconds());
 
 
-    const meses = ['ene', 'feb', 'mar'];
+    const meses = ['ene', 'feb', 'mar','abr','may','jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic' ];
     const dias = ['dom', 'lun', 'mar', 'mier', 'juev','vier', 'sab']
     const diaSemana = dias[fecha.getDay()];
     let data = fecha.getDate(); 
-    let mes = fecha.getMonth();
+    let mes = meses[fecha.getMonth()];
     let año = fecha.getFullYear(); 
-         let fechasa = `${diaSemana} ${data} ${mes} ${año}`
+        let fechasa = `${diaSemana} ${data} ${mes} ${año}`
 
     document.getElementById('hora').innerHTML = `${hora}:${minutos}:${segundos}`;
     document.getElementById('fecha').innerHTML = fechasa;
